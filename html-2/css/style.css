@@ -1,0 +1,423 @@
+/* Start Global Rules */
+* {
+  border: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --min-color: #20c997;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* End Global Rules */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: scale();
+}
+
+.navbar ul li a {
+  position: relative;
+}
+
+
+
+.navbar ul li a::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 90%;
+  background-color: white;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.navbar {
+  border-color: #4e4e4e;
+}
+
+.navbar ul li a:hover::before {
+  width: 70%;
+  background-color: white;
+  opacity: 1;
+}
+
+.navbar .navbar-brand {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.navbar ul li a {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+@media screen and (max-width:992px) {
+  .navbar ul li {
+      background-color: #4e4e4e;
+      padding-left: 10px;
+  }
+
+  .navbar ul li a::before {
+      width: 0;
+      height: 0;
+  }
+
+  .navbar ul .active::after {
+      width: 0;
+      height: 0;
+  }
+}
+
+/* End header  */
+/* start About */
+.About {
+  padding-top: 50px;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+.addrss {
+  text-align: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.addrss h2 {
+  font-weight: 600;
+  color: #f3f3f3;
+  font-size: 140px;
+
+}
+
+.addrss h3 {
+  font-size: 40px;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+
+.addrss h3::before {
+  content: "";
+  position: absolute;
+  background-color: #20c997;
+  width: 100;
+  height: 3px;
+  top: 100%;
+  left: 35%;
+}
+
+.About .contaner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 25px;
+}
+
+.About .contaner .Know {
+  width: 70%;
+  padding-left: 40px;
+}
+
+.About .contaner .Know h4 {
+
+  font-size: 30px;
+  padding: 10px 20px;
+}
+
+.About .contaner .Know .styl {
+  color: #20c997;
+}
+
+.About .contaner .Know p {
+  font-size: 18px;
+  color: #616161;
+  padding: 10px 20px;
+}
+
+.About .contaner .info {
+  width: 30%;
+}
+
+.About .contaner .info ul {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.About .contaner .info ul li:not(:first-child) {
+  padding: 10px;
+  border-top: #ccc 1px solid;
+}
+
+.About .contaner .info ul li {
+  padding: 10px;
+}
+
+.About .contaner .info ul li a {
+  color: black;
+}
+
+.About .contaner .info .btn {
+  color: #20c997;
+  border: solid 1px #20c997;
+  border-radius: 50px;
+  padding: 10px;
+  color: white;
+  background-color: #20c997;
+  margin-left: 20px;
+  padding: 15px 30px;
+  box-shadow: 3px 3px 10px #ccc;
+
+}
+
+.About .contaner .info .btn:hover {
+  background-color: rgb(32, 201, 151);
+  box-shadow: 7px 7px 15px #ccc;
+
+}
+
+.About .contaner .info .one {
+  color: #616161;
+}
+
+.About .contaner .info .two {
+  color: #20c997;
+}
+
+.About .number {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.About .number .item {
+  padding: 20px;
+  width: 80%;
+}
+
+.About .number .item:not(:first-child) {
+  border-left: 1px dashed #ccc;
+}
+
+.About .number h4 {
+  font-size: 40px;
+  color: #6c757d;
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.About .number p {
+  font-size: 20px;
+  color: #616161;
+}
+
+/* start media  */
+@media screen and (max-width:992px) {
+  .About .contaner .info .btn {
+    margin: 20px 20px;
+  }
+
+  .About .contaner {
+    flex-direction: column;
+  }
+
+  .About .contaner .Know {
+    width: 100%;
+    text-align: center;
+
+  }
+
+  .About .contaner .info {
+    width: 100%;
+    padding: 30px;
+
+  }
+
+  .About .number .item {
+    width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width:768px) {
+  .addrss {
+    text-align: center;
+  }
+
+  .addrss h2 {
+    font-size: 80px;
+  }
+
+  .addrss h3 {
+    font-size: 40px;
+    left: 30%;
+    top: 15%;
+  }
+
+  .About .contaner {
+    width: 100%;
+
+  }
+
+  .About .contaner .Know {
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  .About .contaner .info {
+    width: 100%;
+  }
+
+  .About .number {
+    width: 100%;
+    flex-wrap: wrap;
+
+  }
+
+  .About .number .item {
+    width: 50%;
+
+  }
+
+  .About .number .two {
+    border-top: 1px dashed #ccc;
+  }
+
+  .About .number .three {
+    border-top: 1px dashed #ccc;
+  }
+}
+
+/* End media  */
+/* End About */
+/* start serciver */
+.serciver {
+  background-color: #e4e4e4;
+  padding-top: 30px;
+  margin-top: 0px;
+  padding-bottom: 27px;
+
+}
+
+.serciver .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.serciver .container .item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.serciver .container .item .font-icon {
+  width: 15%;
+  padding: 15px;
+
+}
+
+.serciver .container .item .info {
+  width: 85%;
+  padding: 20px;
+}
+
+.serciver .container .item h3 {
+  color: #252b33;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.serciver .container .item p {
+  line-height: 1.8;
+  font-size: 18px;
+  color: #616161;
+  width: 80%;
+  padding-top: 10px;
+}
+
+.serciver .container .item i {
+  background-color: white;
+  box-shadow: 3px 3px 5px #ccc;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* start media  */
+@media screen and (max-width:992px) {
+  .serciver .container .item .info {
+
+    padding-left: 30px;
+  }
+
+  .serciver .container .item p {
+    width: 100%;
+  }
+
+  .serciver .container .item .font-icon {
+    padding: 5px;
+
+  }
+}
+
+@media screen and (max-width:768px) {
+  .serciver .container .item {
+    width: 100%;
+  }
+}
+
+/* End media  */
+
+/* End serciver */
+/* start Resume *//* start footer  */
+.footer {
+  background-color: white;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #222222;
+}
+
+.footer .item span {
+  color: #20c997;
+}
+
+/* start media  */
+@media screen and (max-width:992px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .footer .info {
+    padding-top: 20px;
+  }
+}
+
+/* End media  */
+
+/* End footer  */

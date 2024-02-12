@@ -23,11 +23,11 @@ ul {
   position: relative;
 }
 
-.navbar ul .active {
+/* .navbar ul .active {
   position: relative;
-}
+} */
 
-.navbar ul .active::after {
+/* .navbar ul .active::after {
   content: "";
   position: absolute;
   width: 75%;
@@ -35,7 +35,7 @@ ul {
   top: 90%;
   left: 10px;
   background-color: white;
-}
+} */
 
 .navbar ul li a::before {
   content: "";
